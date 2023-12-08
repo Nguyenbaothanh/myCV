@@ -157,3 +157,15 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+document.getElementById("downloadButton").addEventListener("click", function() {
+  // Đường dẫn tới tệp tin cần tải về
+  var downloadLink = "./assets/images/MyCV-Leo.pdf";
+
+  // Tạo một thẻ <a> ẩn và thực hiện việc tải tệp tin
+  var a = document.createElement("a");
+  a.href = downloadLink;
+  a.download = "CV-NguyenBaoThanh"; // Đặt tên cho tệp tin khi tải về (có thể để trống)
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+});
